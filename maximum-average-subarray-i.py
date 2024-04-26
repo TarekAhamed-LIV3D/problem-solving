@@ -9,10 +9,17 @@ def fx(nums, k):
     max_avg = c_sum / k
     point = 1
     l = k
+    '''
+    {{{TIME LIMITE ERROR}}}
     for i in range(k, len(nums)):
         l += 1
         c_sum = sum(nums[point:l])
         point += 1
+        max_avg = max(max_avg, c_sum / k)
+    return max_avg
+    '''
+    for i in range(k, len(nums)):
+        c_sum += nums[i] - nums[i - k]
         max_avg = max(max_avg, c_sum / k)
     return max_avg
 
