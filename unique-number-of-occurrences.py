@@ -8,7 +8,9 @@ class Solution:
                 c[i] += 1
             else:
                 c[i] = 1
-        return len(c.values()) == len(set(c.values()))
+        x = len(c.values())
+        y = len(set(c.values()))
+        return x == y
 
 arr = [-3,0,1,-3,1,1,1,-3,10,0]
 Solution = Solution()
